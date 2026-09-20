@@ -1,0 +1,13 @@
+# Config file dedicated to the user's personal aliases shared between all exegol containers
+
+# Minimal replacements for the default file tools.
+if (( $+commands[eza] )); then
+  alias ls='eza --color=auto --group-directories-first --icons=never'
+fi
+
+if (( $+commands[bat] )); then
+  alias cat='bat --style=plain --paging=never'
+elif (( $+commands[batcat] )); then
+  alias cat='batcat --style=plain --paging=never'
+fi
+
